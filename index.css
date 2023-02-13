@@ -8,38 +8,132 @@ body{
     padding: 15px;
     display: flex;
     justify-content: center;
+    min-height: 100vh;
 }
 @media screen and (max-width: 576px) {
     body{
-        padding: 5px;
+        padding: 0px;
+        height: 100%;
     }
     .container-wrapper{
         flex-direction: column;
+        border-radius: 0px;
+        padding-top: 15px;
+        margin: 0px;
         width: 100vw;
-        height:100vh;
+        max-width: 576px;
+        min-height:100%;
     }
-    .img-wrapper{
-        order:1;
+    .navbar{
+        padding-right: 20px;
+    }
+    .nav-links-container{
+        align-items: center;
+
+    }
+    .nav-links div{
+        padding: 10px 0px;
     }
     .info-wrapper{
         order:2;
+        width:100%;
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .main-container{
+        flex: 1 1 auto;
     }
     .img-wrapper{
-        max-width:576px;
+        order:1;
+        max-width:100%;
+        content: url(./src/photo-min.jpg);
+        margin:0 auto;
+        width:45%;
+        box-shadow: -1px -1px 15px #8c8c8c, 1px 1px 15px #8c8c8c;
+        border-radius: 50%;
+    }
+    footer{
+        justify-content: space-between;
+        align-items: center;
     }
 
 }
+@media screen and (min-width: 576px){
+
+
 .container-wrapper{
     background-color: #E2F9F3;
     border-radius: 30px;
     display:flex;
-    min-width: 900px;
-    height:625px;
-    /* border: 1px solid red; */
+}
+.nav-links-container{
+    /* flex: 1 1 auto;
+    display: flex;
+    justify-content: center; */
+    padding-right: 30px;
+}
+.info-wrapper{
+    display: flex;
+    /* border:1px solid red; */
+    flex-direction: column;
+    min-width: 450px;
+    max-width: 450px;
+    flex: 2 3 auto;
+}
+.nav-links a{
+    font-size: 1.2rem;
+    /* text-decoration: none;
+    color: #000;
+    cursor: pointer; */
+}
+.main-container{
+    min-width: 450px;
+    /* flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+/* .nav-links{
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+} */
+/* .nav-links div{
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #8c8c8c;
+} */
+/* .nav-links div:hover{
+    border-bottom: 2px solid;
+    padding-top: 1px;
+} */
+/* .img-wrapper{
+    flex: 0 0 470px;
+} */
+/* .img-photo{
+    width: 100%;
+    height:100%;
+    border-radius: 30px;
+    box-shadow: -4px 1px 10px #8c8c8c; 
+} */
+/* footer{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+} */
+
+
 }
 
-header{
-    padding-left: 10px;
+.container-wrapper{
+    background-color: #E2F9F3;
+    /* border-radius: 30px; */
+    display:flex;
 }
 .navbar{
     display: flex;
@@ -51,12 +145,10 @@ header{
     flex: 1 1 auto;
     display: flex;
     justify-content: center;
-    padding-right: 30px;
 }
 .nav-links{
     display: flex;
     width: 100%;
-    max-width: 300px;
 }
 .nav-links div{
     display: flex;
@@ -70,7 +162,7 @@ header{
     padding-top: 1px;
 }
 .nav-links a{
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     text-decoration: none;
     color: #000;
     cursor: pointer;
@@ -78,14 +170,12 @@ header{
 .main-container{
     flex: 1 1 auto;
     display: flex;
-    min-width: 450px;
-    /* border: 1px solid green; */
+    /* min-width: 450px; */
     justify-content: center;
     align-items: center;
 }
 .home-page{
     width: 80%;
-    /* border: 1px solid rgb(255, 119, 0); */
 }
 .home-page .position{
     position: relative;
@@ -134,27 +224,15 @@ header{
 .list-stack{
     list-style: circle;
 }
-.info-wrapper{
-    display: flex;
-    /* border:1px solid red; */
-    flex-direction: column;
-    min-width: 450px;
-    max-width: 450px;
-    flex: 2 3 auto;
-}
-.img-wrapper{
-    flex: 0 0 470px;
-}
-.img-photo{
+/* .img-photo{
     width: 100%;
     height:100%;
     border-radius: 30px;
-    box-shadow: -4px 1px 10px #8c8c8c;
-}
+    box-shadow: -4px 1px 10px #8c8c8c; 
+} */
 footer{
-    padding: 20px 0px;
     display: flex;
-    justify-content: space-around; 
+    padding: 20px 10px;
     align-items: center;
 }
 .social-links img{
