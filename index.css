@@ -1,20 +1,41 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Amiri Quran';
+    line-height: 23px;
 }
 body{
     padding: 15px;
     display: flex;
     justify-content: center;
 }
-#container-wrapper{
+@media screen and (max-width: 576px) {
+    body{
+        padding: 5px;
+    }
+    .container-wrapper{
+        flex-direction: column;
+        width: 100vw;
+        height:100vh;
+    }
+    .img-wrapper{
+        order:1;
+    }
+    .info-wrapper{
+        order:2;
+    }
+    .img-wrapper{
+        max-width:576px;
+    }
+
+}
+.container-wrapper{
     background-color: #E2F9F3;
     border-radius: 30px;
     display:flex;
-    flex-direction: row;
-    min-width: 700px;
-    max-width: 992px;
-    min-height: 625px;
+    min-width: 900px;
+    height:625px;
+    /* border: 1px solid red; */
 }
 
 header{
@@ -56,39 +77,84 @@ header{
 }
 .main-container{
     flex: 1 1 auto;
-    padding: 0px 50px;
     display: flex;
-    max-width: 400px;
+    min-width: 450px;
+    /* border: 1px solid green; */
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
 }
-.list-links{
+.home-page{
+    width: 80%;
+    /* border: 1px solid rgb(255, 119, 0); */
+}
+.home-page .position{
+    position: relative;
+    left: -10px;
+    margin-bottom: 10px;
+}
+.home-page .name{
+    margin-bottom: 15px;
+}
+.home-page .description{
+    position: relative;
+    left: 15px;
+    text-align: justify;
+    padding: 15px;
+}
+.portfolio-wrapper{
     display: flex;
     flex-direction: column;
 }
-#info-wrapper{
+.portfolio-wrapper a{
     display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:#000;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-radius: 0px 0px 0px 7px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #8c8c8c
+}
+.portfolio-wrapper a:hover{
+    border-bottom: 2px solid #000;
+    padding-top: 1px;
+    margin-bottom: 14px;
+    margin-top: -1px;
+    border-radius: 0px 0px 0px 7px;
+}
+.portfolio-wrapper a img{
+    width: 30px;
+}
+.portfolio-name{
+    position: relative;
+    top: -5px;
+    margin-right: 5px
+}
+.list-stack{
+    list-style: circle;
+}
+.info-wrapper{
+    display: flex;
+    /* border:1px solid red; */
     flex-direction: column;
-    min-width: 350px;
+    min-width: 450px;
+    max-width: 450px;
     flex: 2 3 auto;
 }
-#img-wrapper{
-    flex: 1 0 450px;
-    /* min-width: 350px;
-    max-width: 450px; */
+.img-wrapper{
+    flex: 0 0 470px;
 }
 .img-photo{
     width: 100%;
     height:100%;
     border-radius: 30px;
-    box-shadow: -1px 1px 10px #8c8c8c;
+    box-shadow: -4px 1px 10px #8c8c8c;
 }
 footer{
-    padding: 20px 0px 20px 20px;
-    /* border: 1px solid red; */
-    width: 100%;
+    padding: 20px 0px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-around; 
     align-items: center;
 }
 .social-links img{
