@@ -36,9 +36,13 @@ body{
     justify-content: center;
     border-bottom: 1px solid #8c8c8c;
 }
-.nav-links div:hover{
+.nav-links div:hover {
     border-bottom: 2px solid;
     padding-top: 1px;
+}
+.nav-links div:hover > a{
+    position: relative;
+    top: 5px
 }
 .nav-links a{
     text-decoration: none;
