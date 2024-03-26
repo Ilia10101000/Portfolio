@@ -1,4 +1,4 @@
-'use stict';
+'use strict';
 
 function Route(name, htmlName, defaultRoute) {
     try {
@@ -106,3 +106,22 @@ Router.prototype = {
     }
     init();
 }());
+
+document.addEventListener("DOMContentLoaded", function () {
+  function updateActiveClass() {
+    var links = document.querySelectorAll("a");
+
+    links.forEach(function (link) {
+      if (link.getAttribute("href") === window.location.hash) {
+        link.classList.add("active-link");
+      } else {
+        link.classList.remove("active-link");
+      }
+    });
+  }
+  updateActiveClass();
+
+  window.addEventListener("hashchange", function () {
+    updateActiveClass();
+  });
+});
