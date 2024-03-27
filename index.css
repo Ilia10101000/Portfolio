@@ -4,14 +4,29 @@
   font-family: "Amiri Quran";
   line-height: 23px;
 }
+
+.theme-dark{
+  --main-page-bg-color: #171818;
+  --main-container-bg-color: #112820;
+  --main-container-text-color: #e8eceb;
+}
+.theme-light{
+  --main-page-bg-color: #f0f9f9;
+  --main-container-bg-color: #e2f9f3;
+  --main-container-text-color: #0b0e0d;
+}
 body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
+  background-color: var(--main-page-bg-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .container-wrapper {
-  background-color: #e2f9f3;
+  background-color: var(--main-container-bg-color);
   display: flex;
+  color:var(--main-container-text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .navbar {
   display: flex;
@@ -32,13 +47,13 @@ body {
   width: 100%;
   align-items: center;
   text-decoration: none;
-  color: #000;
+  color: var(--main-container-text-color);
   justify-content: center;
   padding-bottom: 10px;
   border-bottom: 1px solid #8c8c8c;
 }
 .nav-links a:hover:not(.active-link) {
-    padding-bottom: 9px;
+    padding-bottom: 10px;
   border-bottom: 2px solid;
 }
 .active-link {
@@ -78,7 +93,7 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #000;
+  color: var(--main-container-text-color);
   padding-bottom: 5px;
   padding-left: 5px;
   border-radius: 0px 0px 0px 7px;
