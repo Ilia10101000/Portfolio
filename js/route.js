@@ -47,7 +47,7 @@ Router.prototype = {
     this.rootElem = document.querySelector(".main-container");
   },
   init: function () {
-    var r = this.routes;
+    let r = this.routes;
     (function (scope, r) {
       window.addEventListener("hashchange", function (e) {
         scope.hasChanged(scope, r);
@@ -57,15 +57,15 @@ Router.prototype = {
   },
   hasChanged: function (scope, r) {
     if (window.location.hash.length > 0) {
-      for (var i = 0, length = r.length; i < length; i++) {
-        var route = r[i];
+      for (let i = 0, length = r.length; i < length; i++) {
+        let route = r[i];
         if (route.isActiveRoute(window.location.hash.substr(1))) {
           scope.goToRoute(route.htmlName);
         }
       }
     } else {
-      for (var i = 0, length = r.length; i < length; i++) {
-        var route = r[i];
+      for (let i = 0, length = r.length; i < length; i++) {
+        let route = r[i];
         if (route.default) {
           scope.goToRoute(route.htmlName);
         }
@@ -74,7 +74,7 @@ Router.prototype = {
   },
   goToRoute: function (htmlName) {
     (function (scope) {
-      var url = "views/" + htmlName,
+      let url = "views/" + htmlName,
         xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -91,7 +91,7 @@ Router.prototype = {
 
 (function () {
   function init() {
-    var router = new Router([
+    let router = new Router([
       new Route("home", "home.html", true),
       new Route("list", "list.html"),
       new Route("stack", "stack.html"),
@@ -102,7 +102,7 @@ Router.prototype = {
 
 document.addEventListener("DOMContentLoaded", function () {
   function updateActiveClass() {
-    var links = document.querySelectorAll("a");
+    let links = document.querySelectorAll("a");
 
     links.forEach(function (link) {
       if (link.getAttribute("href") === window.location.hash) {
@@ -139,6 +139,8 @@ const toogleTheme = () => {
 (function () {
   if (localStorage.getItem("theme")) {
     setTheme(localStorage.getItem("theme"));
+  } else {
+    setTheme("theme-light");
   }
 })();
 
